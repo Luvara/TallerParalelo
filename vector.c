@@ -41,7 +41,7 @@ float vec_sum_sqrt(float *a, int N){
   __m256 w;
   float s;
   for (int i = 0; i < N; i+=8){
-    v = _m256_load_ps(&a[i]);
+    v = _mm256_load_ps(&a[i]);
     w = _mm256_add_ps(w, _mm256_sqrt_ps(v));
   }
   s = 0;
