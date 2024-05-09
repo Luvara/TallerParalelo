@@ -54,8 +54,9 @@ float vec_sum_sqrt(float *a, int N){
 int main() {
     double t0,t1,t;
     int N;
-    N = 10000000;
-    float  *U = malloc(N*sizeof(float));
+    N = 1000000;
+    //float  *U = malloc(N*sizeof(float));
+    float U[N] __attribute__((aligned(32)));
     init(U,N);
     
     float s;
